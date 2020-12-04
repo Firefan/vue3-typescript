@@ -1,12 +1,18 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import Index from '../views/index.vue'
+import ConsolePage from '../views/consolePages/index.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
-    name: 'Index',
-    component: Index
+    name: 'ConsolIndex',
+    component: ConsolePage
   },
+  // {
+  //   path: '/',
+  //   name: 'Index',
+  //   component: Index
+  // },
   {
     path: '/home',
     name: 'Home',

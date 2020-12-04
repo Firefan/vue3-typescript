@@ -22,3 +22,6 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## 在vue3.0搭建初始项目结构
+1. 引入ant-design-vue(bview 暂不支持)

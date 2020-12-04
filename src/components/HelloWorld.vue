@@ -7,20 +7,27 @@
   </div>
 </template>
 
-<script>
-import { defineComponent } from 'vue'
-
+<script lang="ts">
+import { defineComponent, PropType } from 'vue'
+interface Resturant {
+  address: string;
+  jugement: string;
+  level: number;
+}
 export default defineComponent({
   name: 'HelloWorld',
   props: {
-    modelValue: String,
-    custome: String
+    modelValue: { type: String },
+    custome: { type: String },
+    resturant: {
+      type: Object as PropType<Resturant>
+    }
   },
   methods: {
-    changeMsg (e) {
+    changeMsg (e: { target: HTMLInputElement }): void{
       this.$emit('update:modelValue', e.target.value)
     },
-    changeCustome (e) {
+    changeCustome (e: Event & { target: HTMLInputElement }): void {
       this.$emit('update:custome', e.target.value)
     }
   }
